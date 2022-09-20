@@ -1,0 +1,110 @@
+$baseBlack: #101010;
+$baseGray: #f4f4f4;
+$baseRed: #ff1515;
+
+.container {
+  overflow-x: hidden;
+}
+
+.search-input-wrapper {
+  background: $baseGray;
+  fieldset {
+    border: none;
+  }
+}
+
+.brand-buttons {
+  button {
+    height: 34px;
+    min-height: initial;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .css-1ujnqem-MuiTabs-root {
+    min-height: initial;
+    height: 36px;
+  }
+
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #fff;
+    z-index: 2;
+    transition: color 1ms ease;
+    transition-delay: 300ms;
+  }
+  .css-1aquho2-MuiTabs-indicator {
+    height: 100%;
+    background: $baseBlack;
+    border-radius: 50px;
+    border-bottom: none;
+  }
+}
+
+.size-element-catalog {
+  background: $baseGray;
+  border-radius: 6px;
+  padding: 0.2em;
+  color: $baseBlack;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  min-width: 22px;
+  text-align: center;
+}
+
+.gray-button {
+  background-color: $baseGray !important;
+  color: $baseBlack !important;
+  &:active,
+  &:hover {
+    background-color: $baseBlack !important;
+    color: #fff !important;
+  }
+}
+
+.black-button {
+  background-color: $baseBlack !important;
+  color: #fff !important;
+}
+
+.counter-absolute-widget {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.counter-widget {
+  .css-hjz1wm-MuiInputBase-root-MuiInput-root:before {
+    border-bottom: 0;
+  }
+}
+
+.basket-list-item-number {
+  right: 0 !important;
+}
+
+.basket-list-item-number-red,
+.basket-list-item-number,
+.basket-list-total-item-regular,
+.basket-list-total-item {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  height: 24px;
+}
+
+.basket-list-item-number-red {
+  color: $baseRed;
+}
+
+.basket-list-total-item {
+  padding-left: 0 !important;
+}
+
+.bold-font {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}

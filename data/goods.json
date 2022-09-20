@@ -1,0 +1,194 @@
+{
+  "goods": [
+    {
+      "id": 1,
+      "category": "Обувь",
+      "title": "Кроссовки Nike SB Zoom Blazer Low Pro GT",
+      "img": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "price": 1250,
+      "discount_price": 1250,
+      "amount": 5,
+      "brand": "Nike",
+      "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
+      "characteristics": [
+        {
+          "id": 0,
+          "title": "цвет",
+          "values": ["red", "blue", "black", "white"]
+        },
+        {
+          "id": 1,
+          "title": "размер",
+          "values": ["39", "40", "41", "42", "43", "44", "45", "46", "47"]
+        },
+        { "id": 2, "title": "пол", "values": ["male", "female"] }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Обувь",
+      "title": "Кросовки типа 1",
+      "img": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80",
+      "price": 1710,
+      "discount_price": 1500,
+      "amount": 0,
+      "brand": "Adidas",
+      "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
+      "characteristics": [
+        { "id": 0, "title": "цвет", "values": ["blue", "black"] },
+        {
+          "id": 1,
+          "title": "размер",
+          "values": ["36", "37", "38", "39", "40", "41", "42", "43"]
+        },
+        { "id": 2, "title": "пол", "values": ["male", "female"] }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Обувь",
+      "title": "Кросовки не кросовки",
+      "img": "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80",
+      "price": 850,
+      "discount_price": 850,
+      "amount": 30,
+      "brand": "Nike",
+      "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
+      "characteristics": [
+        { "id": 0, "title": "цвет", "values": ["pink", "blue"] },
+        {
+          "id": 1,
+          "title": "размер",
+          "values": ["20", "21", "23", "24", "25", "26"]
+        },
+        { "id": 2, "title": "пол", "values": ["female"] }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Штаны",
+      "title": "Джинсы номер Х",
+      "img": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "price": 910,
+      "discount_price": 910,
+      "amount": 15,
+      "brand": "Gucci",
+      "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
+      "characteristics": [
+        { "id": 0, "title": "цвет", "values": ["pink", "blue", "red"] },
+        { "id": 1, "title": "размер", "values": ["s", "m", "l"] },
+        { "id": 2, "title": "пол", "values": ["female"] }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Штаны",
+      "title": "Штаны из джинсовое кожи",
+      "img": "https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "price": 500,
+      "discount_price": 450,
+      "amount": 33,
+      "brand": "Nike",
+      "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
+      "characteristics": [
+        { "id": 0, "title": "цвет", "values": ["black", "white", "blue"] },
+        { "id": 1, "title": "размер", "values": ["s", "m", "l", "xl"] },
+        { "id": 2, "title": "пол", "values": ["female", "male"] }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Головные уборы",
+      "title": "Кепка черная",
+      "img": "https://images.unsplash.com/photo-1593659238861-ee6e27fb9855?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+      "price": 850,
+      "discount_price": 850,
+      "amount": 30,
+      "brand": "Gucci",
+      "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
+      "characteristics": [
+        { "id": 0, "title": "цвет", "values": ["black"] },
+        { "id": 1, "title": "размер", "values": ["regular"] },
+        { "id": 2, "title": "пол", "values": ["male"] }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Головные уборы",
+      "title": "Кепка белая",
+      "img": "https://images.unsplash.com/photo-1494236560812-d48283be542e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "price": 850,
+      "discount_price": 800,
+      "amount": 10,
+      "brand": "Adidas",
+      "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
+      "characteristics": [
+        { "id": 0, "title": "цвет", "values": ["white"] },
+        { "id": 1, "title": "размер", "values": ["regular"] },
+        { "id": 2, "title": "пол", "values": ["male"] }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Обувь",
+      "title": "Красовки Пума",
+      "img": "https://womanadvice.ru/sites/default/files/21/zhenskie_krossovki_puma_2016_1.jpg",
+      "price": 1005,
+      "discount_price": 1005,
+      "amount": 14,
+      "brand": "Puma",
+      "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
+      "characteristics": [
+        { "id": 0, "title": "цвет", "values": ["white", "black"] },
+        {
+          "id": 1,
+          "title": "размер",
+          "values": ["33", "34", "35", "36", "37"]
+        },
+        { "id": 2, "title": "пол", "values": ["male"] }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "Обувь",
+      "title": "Красовки Модели Черная",
+      "img": "https://images.ua.prom.st/2583815231_w640_h640_muzhskie-krossovki-puma.jpg",
+      "price": 350,
+      "discount_price": 100,
+      "amount": 90,
+      "brand": "Puma",
+      "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
+      "characteristics": [
+        { "id": 0, "title": "цвет", "values": ["black"] },
+        {
+          "id": 1,
+          "title": "размер",
+          "values": ["33", "34", "35", "36", "37"]
+        },
+        { "id": 2, "title": "пол", "values": ["male", "female"] }
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Штаны",
+      "title": "Штаны моднючие",
+      "img": "https://i.pinimg.com/originals/e3/99/79/e39979345c83af440b69225033558aff.jpg",
+      "price": 15500,
+      "discount_price": 15500,
+      "amount": 2,
+      "brand": "Balenciaga",
+      "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
+      "characteristics": [
+        { "id": 0, "title": "цвет", "values": ["black"] },
+        {
+          "id": 1,
+          "title": "размер",
+          "values": ["M", "L", "XL"]
+        },
+        { "id": 2, "title": "пол", "values": ["female"] }
+      ]
+    }
+  ],
+
+  "brands": ["Adidas", "Nike", "Gucci", "Balenciaga"]
+}
