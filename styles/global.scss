@@ -15,31 +15,31 @@ $baseRed: #ff1515;
 
 .brand-buttons {
   button {
-    height: 34px;
-    min-height: initial;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    height: 34px !important;
+    min-height: initial !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
   }
 
   .css-1ujnqem-MuiTabs-root {
-    min-height: initial;
-    height: 36px;
+    min-height: initial !important;
+    height: 36px !important;
   }
 
   .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
-    color: #fff;
-    z-index: 2;
-    transition: color 1ms ease;
-    transition-delay: 300ms;
+    color: #fff !important;
+    z-index: 2 !important;
+    transition: color 1ms ease !important;
+    transition-delay: 300ms !important;
   }
   .css-1aquho2-MuiTabs-indicator {
-    height: 100%;
-    background: $baseBlack;
-    border-radius: 50px;
-    border-bottom: none;
+    height: 100% !important;
+    background: $baseBlack !important;
+    border-radius: 50px !important;
+    border-bottom: none !important;
   }
 }
 
