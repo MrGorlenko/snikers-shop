@@ -5,6 +5,7 @@ import { Good } from "../interfaces";
 
 interface CatalogItemProp extends Good {
   className: string;
+  img: string;
   handleGoodClick(id: number): any;
 }
 

@@ -12,10 +12,16 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 
-import { GoodsGood, Basket, GoodForBasket } from "../../interfaces";
+import { GoodPage, Basket, GoodForBasket } from "../../interfaces";
 import { TopHeader } from "../../widgets/top-header";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
 
-const GoodPage: NextPage<GoodsGood> = ({ good }: GoodsGood) => {
+import "swiper/css";
+import "swiper/css/pagination";
+import Link from "next/link";
+
+const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
   const router = useRouter();
   const dispatch = useDispatch();
   const [inBasket, setInBasket] = useState(false);
@@ -24,10 +30,15 @@ const GoodPage: NextPage<GoodsGood> = ({ good }: GoodsGood) => {
   const [selectedSizes, setSelectedSizes] = useState([""]);
   const goodsInBasket = useSelector((state: Basket) => state.basket.goods);
 
+  const sameGoods = goods.filter((goodItem) => goodItem.title === good.title);
+  console.log(sameGoods);
+
   useEffect(() => {
     const condition = goodsInBasket
       .map((goodinBasket) => goodinBasket.id)
       .includes(good.id);
+
+    // const colorCondition = goodsInBasket.filter((goodInBasket)=>goodInBasket.id === good.id)
 
     if (condition) {
       const selected_sizes = goodsInBasket
@@ -36,6 +47,12 @@ const GoodPage: NextPage<GoodsGood> = ({ good }: GoodsGood) => {
       setSelectedSize(selected_sizes[0]);
       setSelectedSizes(selected_sizes);
       setReadyToBasket(true);
+      setInBasket(true);
+    } else {
+      setSelectedSize("");
+      setSelectedSizes([""]);
+      setReadyToBasket(false);
+      setInBasket(false);
     }
   }, [goodsInBasket, good.id]);
 
@@ -81,14 +98,31 @@ const GoodPage: NextPage<GoodsGood> = ({ good }: GoodsGood) => {
       <TopHeader isBack={true}></TopHeader>
 
       <div style={{ width: 320, height: 320 }} className="m-auto">
-        <Image
-          src={good.img}
-          alt={good.title}
-          width="320"
-          height="320"
-          objectFit="cover"
-          style={{ borderRadius: 30 }}
-        ></Image>
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={50}
+          slidesPerView={1}
+          pagination={{
+            clickable: false,
+            type: "bullets",
+            modifierClass: "goods-",
+            bulletActiveClass: "active-bullet",
+            bulletClass: "bullet",
+          }}
+        >
+          {good.imgs.map((img, index) => (
+            <SwiperSlide key={index}>
+              <Image
+                src={img}
+                width="320"
+                height={"320"}
+                objectFit="cover"
+                style={{ borderRadius: 30 }}
+                alt={good.title}
+              ></Image>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <Typography
         variant="subtitle1"
@@ -106,6 +140,34 @@ const GoodPage: NextPage<GoodsGood> = ({ good }: GoodsGood) => {
       <Typography variant="h1" sx={{ fontSize: 24, fontWeight: 700 }}>
         {good.title}
       </Typography>
+
+      {/*  */}
+
+      <div className="mt-3 d-flex flex-wrap">
+        {sameGoods.length > 1
+          ? sameGoods.map((goodItem) => (
+              <Link key={goodItem.id} href={"/goods/" + goodItem.id}>
+                <div className="me-2 mb-2">
+                  <Image
+                    width={100}
+                    height={100}
+                    objectFit="cover"
+                    className={
+                      good.color === goodItem.color ? "black-border" : ""
+                    }
+                    style={{
+                      borderRadius: 30,
+                    }}
+                    src={goodItem.imgs[0]}
+                    alt={goodItem.color}
+                  ></Image>
+                </div>
+              </Link>
+            ))
+          : ""}
+      </div>
+
+      {/*  */}
 
       <Divider className="w-100 mt-3 mb-3"></Divider>
 
@@ -255,7 +317,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return good.id === Number(id);
   });
   return {
-    props: { good },
+    props: { good, goods },
   };
 };
 

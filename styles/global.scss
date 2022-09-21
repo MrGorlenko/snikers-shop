@@ -108,3 +108,34 @@ $baseRed: #ff1515;
   font-size: 18px;
   line-height: 22px;
 }
+
+.bullet,
+.active-bullet {
+  display: block;
+  height: 4px;
+  border-radius: 50px;
+  margin: 0.1em;
+  transition: 0.2s ease;
+}
+
+.bullet {
+  background-color: rgba(16, 16, 16, 0.3);
+  width: 4px;
+}
+
+.active-bullet {
+  width: 21px;
+  background-color: #101010;
+}
+
+.goods-bullets {
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.black-border {
+  border: 1px solid $baseBlack !important;
+}

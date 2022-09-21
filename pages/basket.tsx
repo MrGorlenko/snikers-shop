@@ -30,12 +30,12 @@ const Basket: NextPage = () => {
     // goodForRemoving = goods[index];
   };
 
-  const totalWithNoDiscount = goods
+  const totalWithNoDiscount: number = goods
     .map((good: GoodForBasket) => good.price * good.amount_in_basket)
-    .reduce((prev, next) => prev + next);
-  const totalWithDiscount = goods
+    .reduce((prev, next) => prev + next, 0);
+  const totalWithDiscount: number = goods
     .map((good: GoodForBasket) => good.discount_price * good.amount_in_basket)
-    .reduce((prev, next) => prev + next);
+    .reduce((prev, next) => prev + next, 0);
 
   const increment = (index: number) => {
     if (goods[index].amount_in_basket >= goods[index].amount) return;
@@ -58,7 +58,7 @@ const Basket: NextPage = () => {
     (good: GoodForBasket, index: number) => (
       <BasketListItem
         key={good.id + (index * 2 + Math.random())}
-        img={good.img}
+        img={good.imgs[0]}
         title={good.title}
         size={good.selected_size}
         price={good.price}

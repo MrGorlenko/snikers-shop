@@ -29,16 +29,18 @@ export interface Good {
   title: string;
   brand: string;
   description: string;
-  img: string;
+  imgs: string[];
   price: number;
   discount_price: number;
   amount: number;
+  color: string;
   characteristics: CharacteristicsObject[];
 }
 
 export interface GoodForBasket extends Good {
   amount_in_basket: number;
   selected_size: string;
+  img?: string;
 }
 
 export interface Goods {
@@ -54,8 +56,9 @@ export interface MainPage {
   brands: string[];
 }
 
-export interface GoodsGood {
+export interface GoodPage {
   good: Good;
+  goods: Good[];
 }
 
 export interface Basket {

@@ -56,9 +56,11 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
             title={good.title}
             className="col-6"
             brand={good.brand}
-            img={good.img}
+            img={good.imgs[0]}
+            imgs={good.imgs}
             category={good.category}
             price={good.price}
+            color={good.color}
             discount_price={good.discount_price}
             characteristics={good.characteristics}
             description={good.description}

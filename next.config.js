@@ -9,6 +9,7 @@ const nextConfig = {
       "womanadvice.ru",
       "images.ua.prom.st",
       "i.pinimg.com",
+      "static.nike.com",
     ],
   },
   sassOptions: {
