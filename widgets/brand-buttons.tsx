@@ -25,8 +25,7 @@ export const BrandButtons: FunctionComponent<Brands> = ({
 
   return (
     <Box
-      sx={{ maxWidth: { xs: 320, sm: 480 }, bgcolor: "background.paper" }}
-      className="brand-buttons"
+      sx={{ maxWidth: { xs: "100%", sm: 480 }, bgcolor: "background.paper" }}
     >
       <Tabs
         value={currentBrandIndex}
@@ -34,10 +33,26 @@ export const BrandButtons: FunctionComponent<Brands> = ({
         variant="scrollable"
         scrollButtons={false}
         aria-label="scrollable prevent tabs example"
+        classes={{
+          indicator: "catalog-tab-indicator",
+        }}
       >
-        <Tab label="Все"></Tab>
+        <Tab
+          label="Все"
+          classes={{
+            root: "catalog-tab",
+            selected: "selected-catalog-tab",
+          }}
+        ></Tab>
         {brands.map((brand, index) => (
-          <Tab key={index} label={brand}></Tab>
+          <Tab
+            key={index}
+            label={brand}
+            classes={{
+              root: "catalog-tab",
+              selected: "selected-catalog-tab",
+            }}
+          ></Tab>
         ))}
       </Tabs>
     </Box>

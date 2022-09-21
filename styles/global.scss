@@ -13,34 +13,29 @@ $baseRed: #ff1515;
   }
 }
 
-.brand-buttons {
-  button {
-    height: 34px !important;
-    min-height: initial !important;
-    font-weight: 600 !important;
-    font-size: 14px !important;
-    line-height: 17px !important;
-    padding-top: 0.5em !important;
-    padding-bottom: 0.5em !important;
-  }
+.catalog-tab {
+  height: 34px !important;
+  min-height: initial !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  padding-top: 0.5em !important;
+  padding-bottom: 0.5em !important;
+  background-color: $baseGray !important;
+  color: $baseBlack !important;
+  transition: color 300ms ease !important;
+  border-radius: 50px !important;
+  border-bottom: none !important;
+  margin-right: 0.3em !important;
+}
+.selected-catalog-tab {
+  background: $baseBlack !important;
+  color: #fff !important;
+  z-index: 3;
+}
 
-  .css-1ujnqem-MuiTabs-root {
-    min-height: initial !important;
-    height: 36px !important;
-  }
-
-  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
-    color: #fff !important;
-    z-index: 2 !important;
-    transition: color 1ms ease !important;
-    transition-delay: 300ms !important;
-  }
-  .css-1aquho2-MuiTabs-indicator {
-    height: 100% !important;
-    background: $baseBlack !important;
-    border-radius: 50px !important;
-    border-bottom: none !important;
-  }
+.catalog-tab-indicator {
+  display: none !important;
 }
 
 .size-element-catalog {
