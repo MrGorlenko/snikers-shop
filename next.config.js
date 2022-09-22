@@ -5,11 +5,10 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: [
-      "images.unsplash.com",
-      "womanadvice.ru",
-      "images.ua.prom.st",
-      "i.pinimg.com",
       "static.nike.com",
+      "assets.adidas.com",
+      "media.gucci.com",
+      "images.puma.com",
     ],
   },
   sassOptions: {

@@ -4,6 +4,7 @@ import Divider from "@mui/material/Divider";
 import BasketIcon from "../components/basket-icon";
 import { GoBackButton } from "./go-back-button";
 import { HeaderOptions } from "../interfaces";
+import Link from "next/link";
 
 export const TopHeader: FunctionComponent<HeaderOptions> = ({ isBack }) => {
   return (
@@ -13,12 +14,14 @@ export const TopHeader: FunctionComponent<HeaderOptions> = ({ isBack }) => {
           {isBack ? <GoBackButton></GoBackButton> : ""}
         </div>
         <div className="col-8 d-flex align-items-center">
-          <Image
-            src={require("../assets/icons/logo.svg")}
-            width={211}
-            height={24}
-            alt="logo"
-          ></Image>
+          <Link href="/">
+            <Image
+              src={require("../assets/icons/logo.svg")}
+              width={211}
+              height={24}
+              alt="logo"
+            ></Image>
+          </Link>
         </div>
         <div className="col-2 d-flex justify-content-end position-relative">
           <BasketIcon></BasketIcon>

@@ -31,7 +31,6 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
   const goodsInBasket = useSelector((state: Basket) => state.basket.goods);
 
   const sameGoods = goods.filter((goodItem) => goodItem.title === good.title);
-  console.log(sameGoods);
 
   useEffect(() => {
     const condition = goodsInBasket

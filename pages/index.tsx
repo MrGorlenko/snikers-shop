@@ -25,11 +25,25 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
   useEffect(() => {
     if (currentBrand !== "Все") {
       const filteredGoods = goods.filter((good) => good.brand === currentBrand);
-      setGoodsList(filteredGoods);
+      const uniqeGoods = Array.from(
+        new Map(filteredGoods.map((good) => [good["title"], good]))
+      ).map((array) => array[1]);
+      setGoodsList(uniqeGoods);
     } else {
-      setGoodsList(goods);
+      const uniqeGoods = Array.from(
+        new Map(goods.map((good) => [good["title"], good]))
+      ).map((array) => array[1]);
+      setGoodsList(uniqeGoods);
     }
   }, [currentBrand, goods]);
+
+  // useEffect(() => {
+  // const uniqeGoods = Array.from(
+  //   new Map(goodsList.map((good) => [good["title"], good]))
+  // ).map((array) => array[1]);
+
+  //   setGoodsList(uniqeGoods);
+  // }, [goodsList]);
 
   return (
     <div className="container">
