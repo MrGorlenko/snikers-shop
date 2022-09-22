@@ -25,8 +25,8 @@ const Basket: NextPage = () => {
   const [showModal, setShowModal] = useState(false);
 
   const removeFromBasketHandler: any = (index: number) => {
-    // dispatch(removeFromBasket(index));
-    setShowModal(true);
+    dispatch(removeFromBasket(index));
+    // setShowModal(true);
     // goodForRemoving = goods[index];
   };
 
