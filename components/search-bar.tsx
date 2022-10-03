@@ -1,9 +1,17 @@
 import React, { FunctionComponent } from "react";
 import Box from "@mui/material/Box";
 import SearchIcon from "@mui/icons-material/Search";
-import TextField from "@mui/material/TextField";
+import { TextFieldComponent } from "./textfield-component";
 
-export const SearchBar: FunctionComponent = () => {
+interface SearchBar {
+  searchHandler(text: string): any;
+}
+
+export const SearchBar: FunctionComponent<SearchBar> = ({ searchHandler }) => {
+  const textHandler = (text: string) => {
+    searchHandler(text);
+  };
+
   return (
     <Box
       sx={{
@@ -22,20 +30,10 @@ export const SearchBar: FunctionComponent = () => {
           my: 0.5,
         }}
       />
-      <TextField
-        id="input-with-sx"
+      <TextFieldComponent
         label="Поиск по каталогу"
-        multiline
-        variant="outlined"
-        fullWidth={true}
-        size={"small"}
-        InputProps={{ style: {} }}
-        InputLabelProps={{
-          style: {
-            color: "#8C949C",
-          },
-        }}
-      />
+        onChange={textHandler}
+      ></TextFieldComponent>
     </Box>
   );
 };

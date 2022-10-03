@@ -10,22 +10,46 @@
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/fde2ecbe-ccfd-4aa1-9a13-ae626dee4409/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7bcc1fc6-447b-4e27-ba26-8e3cf28f5360/air-max-flyknit-racer-mens-shoes-PsrWR7.png"
       ],
-      "price": 1250,
-      "discount_price": 1250,
       "amount": 5,
       "brand": "Nike",
       "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
       "color": "rainbow",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["rainbow", "black", "gray"]
-        },
+      "colors": ["rainbow", "black", "gray"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43", "44", "45", "46", "47"]
+          "value": "39",
+          "amount": 10,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "40",
+          "amount": 8,
+          "price": 6900,
+          "discount_price": 6500
+        },
+        {
+          "id": 3,
+          "value": "41",
+          "amount": 30,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "42",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "43",
+          "amount": 5,
+          "price": 7000,
+          "discount_price": 6900
         }
       ]
     },
@@ -39,22 +63,60 @@
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2608332b-6953-4c8a-a575-a67e406b9d0d/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/72d02e91-4f10-456f-86ed-e1fdc9daa51e/air-max-flyknit-racer-mens-shoes-PsrWR7.png"
       ],
-      "price": 1250,
-      "discount_price": 1250,
       "amount": 5,
       "brand": "Nike",
       "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
       "color": "black",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["rainbow", "black", "gray"]
-        },
+      "colors": ["rainbow", "black", "gray"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43", "44", "45", "46", "47"]
+          "value": "39",
+          "amount": 10,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "40",
+          "amount": 8,
+          "price": 6900,
+          "discount_price": 6500
+        },
+        {
+          "id": 3,
+          "value": "41",
+          "amount": 30,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "42",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "43",
+          "amount": 5,
+          "price": 7000,
+          "discount_price": 6900
+        },
+        {
+          "id": 6,
+          "value": "44",
+          "amount": 15,
+          "price": 7500,
+          "discount_price": 7200
+        },
+        {
+          "id": 7,
+          "value": "45",
+          "amount": 4,
+          "price": 8300,
+          "discount_price": 8300
         }
       ]
     },
@@ -68,22 +130,25 @@
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b7675dbb-cd01-484b-98e7-14a5ce01edf9/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/aeef3c65-e87f-443c-aa72-5edfaa5d66fc/air-max-flyknit-racer-mens-shoes-PsrWR7.png"
       ],
-      "price": 1250,
-      "discount_price": 1250,
       "amount": 5,
       "brand": "Nike",
       "description": "Rebuilt using insights from Grant Taylor, the Nike SB Zoom Blazer Low Pro GT is a fresh take on a favourite skate shoe. The updated design has higher taping to give you more durability.",
       "color": "gray",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["rainbow", "black", "gray"]
-        },
+      "colors": ["rainbow", "black", "gray"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43", "44", "45", "46", "47"]
+          "value": "44",
+          "amount": 90,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "45",
+          "amount": 18,
+          "price": 6900,
+          "discount_price": 6500
         }
       ]
     },
@@ -96,22 +161,46 @@
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/715125458c5c4edd84c4ae990117aa99_9366/Samba_OG_Shoes_Grey_HP7905_02_standard_hover.jpg",
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ad5569ce44384300a5bdae990117c318_9366/Samba_OG_Shoes_Grey_HP7905_04_standard.jpg"
       ],
-      "price": 6050,
-      "discount_price": 5500,
       "amount": 5,
       "brand": "Adidas",
       "description": "Great catch! This exclusive product is only available at adidas and can't be found anywhere else. This product is excluded from all promotional discounts and offers.",
       "color": "gray",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["gray"]
-        },
+      "colors": ["gray"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43"]
+          "value": "39",
+          "amount": 10,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "40",
+          "amount": 8,
+          "price": 6900,
+          "discount_price": 6500
+        },
+        {
+          "id": 3,
+          "value": "41",
+          "amount": 30,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "42",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "43",
+          "amount": 5,
+          "price": 7000,
+          "discount_price": 6900
         }
       ]
     },
@@ -124,22 +213,46 @@
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/84b8b794e94b4e06a4ecaed1013610d7_9366/Lite_Racer_Adapt_5.0_Shoes_Black_HR1800_02_standard_hover.jpg",
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4979c19ca38e48e8992caed1013631fe_9366/Lite_Racer_Adapt_5.0_Shoes_Black_HR1800_05_standard.jpg"
       ],
-      "price": 5000,
-      "discount_price": 5000,
       "amount": 5,
       "brand": "Adidas",
       "description": "These wide fit adidas shoes are crafted with a Cloudfoam midsole and cushioned sockliner for a light and springy feel. They're inspired by running shoes, but work just as well for juggling daily tasks as they do for jogging. Made with a series of recycled materials, this upper features at least 50% recycled content. This product represents just one of our solutions to help end plastic waste.",
       "color": "black",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["black", "white"]
-        },
+      "colors": ["black", "white"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43"]
+          "value": "39",
+          "amount": 10,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "40",
+          "amount": 0,
+          "price": 6900,
+          "discount_price": 6500
+        },
+        {
+          "id": 3,
+          "value": "41",
+          "amount": 0,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "42",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "43",
+          "amount": 5,
+          "price": 7000,
+          "discount_price": 6900
         }
       ]
     },
@@ -152,22 +265,46 @@
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9cb0e875e6484c949353aed1012e4130_9366/Lite_Racer_Adapt_5.0_Shoes_White_HR1798_04_standard.jpg",
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e04e05386bca4335b1f0aed1012e4bd0_9366/Lite_Racer_Adapt_5.0_Shoes_White_HR1798_05_standard.jpg"
       ],
-      "price": 5000,
-      "discount_price": 5000,
       "amount": 5,
       "brand": "Adidas",
       "description": "These wide fit adidas shoes are crafted with a Cloudfoam midsole and cushioned sockliner for a light and springy feel. They're inspired by running shoes, but work just as well for juggling daily tasks as they do for jogging. Made with a series of recycled materials, this upper features at least 50% recycled content. This product represents just one of our solutions to help end plastic waste.",
       "color": "white",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["black", "white"]
-        },
+      "colors": ["black", "white"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43"]
+          "value": "41",
+          "amount": 10,
+          "price": 6870,
+          "discount_price": 6870
+        },
+        {
+          "id": 2,
+          "value": "42",
+          "amount": 8,
+          "price": 7200,
+          "discount_price": 7200
+        },
+        {
+          "id": 3,
+          "value": "43",
+          "amount": 30,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "44",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "45",
+          "amount": 5,
+          "price": 7000,
+          "discount_price": 6900
         }
       ]
     },
@@ -181,22 +318,46 @@
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/72da4c61-f0ed-41b4-88d0-7fb9aea046aa/kd15-basketball-shoes-10P3rj.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/dcb535c9-e135-4c21-a7d6-56bcb46d40c5/kd15-basketball-shoes-10P3rj.png"
       ],
-      "price": 7500,
-      "discount_price": 7200,
       "amount": 30,
       "brand": "Nike",
       "description": "Kevin Durant thrives in big games. When the stakes are high, he'll play every minute if it means getting a crucial victory. The KD15 is ready to go the distance. Lighter than his previous signature shoe, it helps you stay bouncy and comfortable in crunch time. The ride is as smooth as KD’s pull-up jumper and the cushioning is as plush as his right-to-left crossover in traffic, so that you can feel contained when your team needs you the most.",
       "color": "acid-green",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["acid-green", "black-red"]
-        },
+      "colors": ["acid-green", "black-red"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43", "44", "45", "46", "47"]
+          "value": "39",
+          "amount": 10,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "40",
+          "amount": 0,
+          "price": 6900,
+          "discount_price": 6500
+        },
+        {
+          "id": 3,
+          "value": "41",
+          "amount": 0,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "0",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "0",
+          "amount": 5,
+          "price": 7000,
+          "discount_price": 6900
         }
       ]
     },
@@ -209,22 +370,46 @@
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/308b15d9-35b5-481c-91c8-7ea5a37d74c9/kd15-basketball-shoes-10P3rj.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a59c7174-9d83-46bc-a452-f704084dfc2f/kd15-basketball-shoes-10P3rj.png"
       ],
-      "price": 7500,
-      "discount_price": 7200,
       "amount": 30,
       "brand": "Nike",
       "description": "Kevin Durant thrives in big games. When the stakes are high, he'll play every minute if it means getting a crucial victory. The KD15 is ready to go the distance. Lighter than his previous signature shoe, it helps you stay bouncy and comfortable in crunch time. The ride is as smooth as KD’s pull-up jumper and the cushioning is as plush as his right-to-left crossover in traffic, so that you can feel contained when your team needs you the most.",
       "color": "black-red",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["acid-green", "black-red"]
-        },
+      "colors": ["acid-green", "black-red"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43", "44", "45", "46", "47"]
+          "value": "39",
+          "amount": 0,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "40",
+          "amount": 5,
+          "price": 6900,
+          "discount_price": 6500
+        },
+        {
+          "id": 3,
+          "value": "41",
+          "amount": 10,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "42",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "43",
+          "amount": 0,
+          "price": 7000,
+          "discount_price": 6900
         }
       ]
     },
@@ -237,22 +422,46 @@
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3cc96f43-47b6-43cb-951d-d8f73bb2f912/air-force-1-07-mens-shoes-5QFp5Z.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a0a300da-2e16-4483-ba64-9815cf0598ac/air-force-1-07-mens-shoes-5QFp5Z.png"
       ],
-      "price": 7100,
-      "discount_price": 7100,
       "amount": 30,
       "brand": "Nike",
       "description": "The radiance lives on in the Nike Air Force 1 ’07, the b-ball OG that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.",
       "color": "white",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["white", "black"]
-        },
+      "colors": ["white", "black"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43", "44", "45", "46", "47"]
+          "value": "39",
+          "amount": 10,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "40",
+          "amount": 0,
+          "price": 6900,
+          "discount_price": 6500
+        },
+        {
+          "id": 3,
+          "value": "41",
+          "amount": 0,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "42",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "43",
+          "amount": 5,
+          "price": 7000,
+          "discount_price": 6900
         }
       ]
     },
@@ -265,22 +474,46 @@
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7cd0845e-4eba-4ccf-8237-bc47f1e31f3e/air-force-1-07-mens-shoes-5QFp5Z.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/900c2ac8-8a3e-45f7-aac7-c92ccce8505a/air-force-1-07-mens-shoes-5QFp5Z.png"
       ],
-      "price": 7100,
-      "discount_price": 7100,
       "amount": 30,
       "brand": "Nike",
       "description": "The radiance lives on in the Nike Air Force 1 ’07, the b-ball OG that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.",
       "color": "black",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["white", "black"]
-        },
+      "colors": ["white", "black"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43", "44", "45", "46", "47"]
+          "value": "39",
+          "amount": 10,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "40",
+          "amount": 0,
+          "price": 6900,
+          "discount_price": 6500
+        },
+        {
+          "id": 3,
+          "value": "41",
+          "amount": 0,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "42",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "43",
+          "amount": 5,
+          "price": 7000,
+          "discount_price": 6900
         }
       ]
     },
@@ -294,22 +527,46 @@
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380173/12/fnd/PNA/fmt/png/Speedcat-LS-Men's-Driving-Shoes",
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380173/12/sv03/fnd/PNA/fmt/png/Speedcat-LS-Men's-Driving-Shoes"
       ],
-      "price": 6500,
-      "discount_price": 6500,
       "amount": 30,
       "brand": "Puma",
       "description": "You weren’t made to follow, so don’t. Deviate from the pack in Speedcat. This classic kick has owned the intersection between track and street for generations– and it’s showing no signs of slowing down. Wrapped in rich suede and finished off with a tire tread bottom, it’s a little unorthodox– but then again, so are you. So take a chance, stand out, and dare to differ. But whatever you do, do it in Speedcat.",
       "color": "white",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["white", "black"]
-        },
+      "colors": ["white", "black"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43", "44", "45", "46", "47"]
+          "value": "39",
+          "amount": 10,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "40",
+          "amount": 10,
+          "price": 6900,
+          "discount_price": 6500
+        },
+        {
+          "id": 3,
+          "value": "41",
+          "amount": 12,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "42",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "43",
+          "amount": 5,
+          "price": 7000,
+          "discount_price": 6900
         }
       ]
     },
@@ -322,22 +579,46 @@
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380173/01/sv03/fnd/PNA/fmt/png/Speedcat-LS-Men's-Driving-Shoes",
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380173/01/sv04/fnd/PNA/fmt/png/Speedcat-LS-Men's-Driving-Shoes"
       ],
-      "price": 6500,
-      "discount_price": 6500,
       "amount": 30,
       "brand": "Puma",
       "description": "You weren’t made to follow, so don’t. Deviate from the pack in Speedcat. This classic kick has owned the intersection between track and street for generations– and it’s showing no signs of slowing down. Wrapped in rich suede and finished off with a tire tread bottom, it’s a little unorthodox– but then again, so are you. So take a chance, stand out, and dare to differ. But whatever you do, do it in Speedcat.",
       "color": "black",
-      "characteristics": [
-        {
-          "id": 0,
-          "title": "цвет",
-          "values": ["white", "black"]
-        },
+      "colors": ["white", "black"],
+      "sizes": [
         {
           "id": 1,
-          "title": "размер",
-          "values": ["39", "40", "41", "42", "43", "44", "45", "46", "47"]
+          "value": "39",
+          "amount": 10,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 2,
+          "value": "40",
+          "amount": 10,
+          "price": 6900,
+          "discount_price": 6500
+        },
+        {
+          "id": 3,
+          "value": "41",
+          "amount": 12,
+          "price": 6900,
+          "discount_price": 6900
+        },
+        {
+          "id": 4,
+          "value": "42",
+          "amount": 40,
+          "price": 6500,
+          "discount_price": 6500
+        },
+        {
+          "id": 5,
+          "value": "43",
+          "amount": 5,
+          "price": 7000,
+          "discount_price": 6900
         }
       ]
     }

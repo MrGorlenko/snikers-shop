@@ -13,6 +13,11 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
   const router: any = useRouter();
   const [goodsList, setGoodsList] = useState<GoodForBasket[]>([...goods]);
   const [currentBrand, setCurrentBrand] = useState("Все");
+  const [searchbar, setSearchbar] = useState("");
+
+  const searchHandler = (text: string) => {
+    setSearchbar(text);
+  };
 
   const handleCurrentBrandHandler: any = (brand: string) => {
     setCurrentBrand(brand);
@@ -28,22 +33,20 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
       const uniqeGoods = Array.from(
         new Map(filteredGoods.map((good) => [good["title"], good]))
       ).map((array) => array[1]);
-      setGoodsList(uniqeGoods);
+      const searchedUniqeGoods = uniqeGoods.filter((good) =>
+        new RegExp(searchbar.toLowerCase()).test(good.title.toLowerCase())
+      );
+      setGoodsList(searchedUniqeGoods);
     } else {
       const uniqeGoods = Array.from(
         new Map(goods.map((good) => [good["title"], good]))
       ).map((array) => array[1]);
-      setGoodsList(uniqeGoods);
+      const searchedUniqeGoods = uniqeGoods.filter((good) =>
+        new RegExp(searchbar.toLowerCase()).test(good.title.toLowerCase())
+      );
+      setGoodsList(searchedUniqeGoods);
     }
-  }, [currentBrand, goods]);
-
-  // useEffect(() => {
-  // const uniqeGoods = Array.from(
-  //   new Map(goodsList.map((good) => [good["title"], good]))
-  // ).map((array) => array[1]);
-
-  //   setGoodsList(uniqeGoods);
-  // }, [goodsList]);
+  }, [currentBrand, goods, searchbar]);
 
   return (
     <div className="container">
@@ -53,7 +56,7 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
         Каталог товаров
       </Typography>
 
-      <SearchBar></SearchBar>
+      <SearchBar searchHandler={searchHandler}></SearchBar>
 
       <div className="mt-2 pt-2"></div>
 
@@ -73,10 +76,12 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
             img={good.imgs[0]}
             imgs={good.imgs}
             category={good.category}
-            price={good.price}
+            minPrice={good.sizes
+              .map((size) => size.discount_price)
+              .reduce((a, b) => Math.min(a, b))}
+            sizes={good.sizes}
             color={good.color}
-            discount_price={good.discount_price}
-            characteristics={good.characteristics}
+            colors={good.colors}
             description={good.description}
             amount={good.amount}
             handleGoodClick={goToGood}

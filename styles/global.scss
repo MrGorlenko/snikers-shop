@@ -62,6 +62,9 @@ $baseRed: #ff1515;
 .black-button {
   background-color: $baseBlack !important;
   color: #fff !important;
+  p:first-child {
+    color: #fff;
+  }
 }
 
 .counter-absolute-widget {
@@ -133,4 +136,59 @@ $baseRed: #ff1515;
 
 .black-border {
   border: 1px solid $baseBlack !important;
+}
+
+.removeGoodModalWrapper,
+.removeGoodModalSwitcher {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.removeGoodModalWrapper {
+  height: 100vh;
+  transition: 0.3s ease;
+}
+
+.removeGoodModalSwitcher {
+  height: calc(100vh - 370px);
+}
+
+.removeGoodModal {
+  position: fixed;
+  transition: 0.3s ease;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+  height: 370px;
+}
+
+.active-remove-modal {
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 2;
+  .removeGoodModal {
+    bottom: 0;
+  }
+}
+
+.removed-remove-modal {
+  background-color: rgba($color: #000000, $alpha: 0);
+  .removeGoodModal {
+    bottom: -100%;
+  }
+}
+
+.z-index-1 {
+  z-index: -1;
+}
+
+.progress-primar {
+  background-color: initial !important;
+  border-bottom: 0.5px solid rgba(16, 16, 16, 0.1) !important;
+  height: 3.5px !important;
+  & > span {
+    background-color: #00c667 !important;
+  }
 }

@@ -1,7 +1,8 @@
 import { Divider, List, ListItem, Typography } from "@mui/material";
 import type { NextPage } from "next";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
+import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
@@ -18,23 +19,59 @@ import ListItemSecondaryAction from "@mui/material/ListItemSecondaryAction";
 import { RemoveGoodModal } from "../widgets/remove-good-modal";
 
 const Basket: NextPage = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
   const goods: GoodForBasket[] = useSelector(
     (state: Basket) => state.basket.goods
   );
   const [showModal, setShowModal] = useState(false);
+  const [modalZIndex, setModalZIndex] = useState("-1");
+  const [modalClassName, setModalClassName] = useState("");
+  const [removedIndex, setRemovedIndex] = useState(0);
+  const [loadRemovingModal, setLoadRemovingModal] = useState(false);
 
   const removeFromBasketHandler: any = (index: number) => {
-    dispatch(removeFromBasket(index));
-    // setShowModal(true);
-    // goodForRemoving = goods[index];
+    setRemovedIndex(index);
+    removingGood.title = goods[index].title;
+    setShowModal(true);
   };
 
+  const deleteFromBasketHandler: any = (index: number) => {
+    dispatch(removeFromBasket(index));
+  };
+
+  const removingGood = {
+    title: "",
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadRemovingModal(true);
+    }, 350);
+  });
+
+  useEffect(() => {
+    if (!showModal) {
+      setModalClassName("removed-remove-modal");
+      setTimeout(() => {
+        setModalZIndex("-1");
+      }, 300);
+    } else {
+      setModalZIndex("2");
+      setTimeout(() => {
+        setModalClassName("active-remove-modal");
+      }, 300);
+    }
+  }, [showModal, modalZIndex]);
+
   const totalWithNoDiscount: number = goods
-    .map((good: GoodForBasket) => good.price * good.amount_in_basket)
+    .map((good: GoodForBasket) => good.selected_price * good.amount_in_basket)
     .reduce((prev, next) => prev + next, 0);
   const totalWithDiscount: number = goods
-    .map((good: GoodForBasket) => good.discount_price * good.amount_in_basket)
+    .map(
+      (good: GoodForBasket) =>
+        good.selected_discount_price * good.amount_in_basket
+    )
     .reduce((prev, next) => prev + next, 0);
 
   const increment = (index: number) => {
@@ -46,23 +83,19 @@ const Basket: NextPage = () => {
     dispatch(decrementGood(index));
   };
 
-  // let goodForRemoving = {
-  //   title: "",
-  //   img: "",
-  //   selected_size: "",
-  //   price: 0,
-  //   wrapperClassName: "",
-  // };
+  const goToOrder = () => {
+    router.push("/order/1");
+  };
 
-  const renderedPosts: JSX.Element[] = goods.map(
+  const GoodsInBasket: JSX.Element[] = goods.map(
     (good: GoodForBasket, index: number) => (
       <BasketListItem
         key={good.id + (index * 2 + Math.random())}
         img={good.imgs[0]}
         title={good.title}
         size={good.selected_size}
-        price={good.price}
-        discount_price={good.discount_price}
+        price={good.selected_price}
+        discount_price={good.selected_discount_price}
         childrenCounter={
           <GoodCounter
             classes="counter-absolute-widget"
@@ -89,15 +122,21 @@ const Basket: NextPage = () => {
     )
   );
 
-  // const areYouSure: JSX.Element = (
-  //   <RemoveGoodModal
-  //     img={goodForRemoving.img}
-  //     title={goodForRemoving.title}
-  //     size={goodForRemoving.selected_size}
-  //     price={goodForRemoving.price}
-  //     wrapperClassName={""}
-  //   ></RemoveGoodModal>
-  // );
+  const areYouSure: JSX.Element = (
+    <RemoveGoodModal
+      img={goods[removedIndex].imgs[0]}
+      title={goods[removedIndex].title}
+      size={goods[removedIndex].selected_size}
+      price={goods[removedIndex].selected_price}
+      zIndex={modalZIndex}
+      wrapperClassName={modalClassName}
+      switchOffHandler={() => {
+        setShowModal(false);
+      }}
+      reject={() => setShowModal(false)}
+      deleteFunc={() => deleteFromBasketHandler(removedIndex)}
+    ></RemoveGoodModal>
+  );
 
   return (
     <div className="container pb-3">
@@ -113,7 +152,7 @@ const Basket: NextPage = () => {
       >
         Корзина
       </Typography>
-      <List>{renderedPosts}</List>
+      <List>{GoodsInBasket}</List>
 
       <div>
         <List className="pt-0">
@@ -165,9 +204,12 @@ const Basket: NextPage = () => {
       <Button
         className="black-button w-100"
         sx={{ height: 50, borderRadius: "25px" }}
+        onClick={goToOrder}
       >
         Перейти к оформлению
       </Button>
+
+      {loadRemovingModal ? <div>{areYouSure}</div> : ""}
     </div>
   );
 };

@@ -4,9 +4,15 @@ import Divider from "@mui/material/Divider";
 import BasketIcon from "../components/basket-icon";
 import { GoBackButton } from "./go-back-button";
 import { HeaderOptions } from "../interfaces";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const TopHeader: FunctionComponent<HeaderOptions> = ({ isBack }) => {
+  const router = useRouter();
+
+  const goToMain = () => {
+    router.push("/");
+  };
+
   return (
     <header className="mb-3">
       <div className="pt-3 d-flex flex-wrap justify-content-between align-items-center">
@@ -14,14 +20,13 @@ export const TopHeader: FunctionComponent<HeaderOptions> = ({ isBack }) => {
           {isBack ? <GoBackButton></GoBackButton> : ""}
         </div>
         <div className="col-8 d-flex align-items-center">
-          <Link href="/">
-            <Image
-              src={require("../assets/icons/logo.svg")}
-              width={211}
-              height={24}
-              alt="logo"
-            ></Image>
-          </Link>
+          <Image
+            src={require("../assets/icons/logo.svg")}
+            width={211}
+            height={24}
+            alt="logo"
+            onClick={goToMain}
+          ></Image>
         </div>
         <div className="col-2 d-flex justify-content-end position-relative">
           <BasketIcon></BasketIcon>

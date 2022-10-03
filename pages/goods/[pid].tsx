@@ -26,6 +26,8 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
   const dispatch = useDispatch();
   const [inBasket, setInBasket] = useState(false);
   const [selectedSize, setSelectedSize] = useState("");
+  const [selectedPrice, setSelectedPrice] = useState(0);
+  const [selectedDiscountPrice, setSelectedDiscountPrice] = useState(0);
   const [readyToBasket, setReadyToBasket] = useState(false);
   const [selectedSizes, setSelectedSizes] = useState([""]);
   const goodsInBasket = useSelector((state: Basket) => state.basket.goods);
@@ -56,15 +58,21 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
   }, [goodsInBasket, good.id]);
 
   // Это кнопочки с размерами
-  const handleSizeSelection: any = (size: string) => {
+  const handleSizeSelection: any = (
+    size: string,
+    price: number,
+    discount_price: number
+  ) => {
     if (selectedSizes.includes(size)) {
       // && в корзине (то есть на будущее в списке selectedSizes)
       setReadyToBasket(true);
       setInBasket(true);
     } else {
-      setReadyToBasket(false);
+      // setReadyToBasket(false);
       setInBasket(false);
     }
+    setSelectedDiscountPrice(discount_price);
+    setSelectedPrice(price);
     setSelectedSize(size);
   };
 
@@ -83,6 +91,8 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
       ...good,
       amount_in_basket: 1,
       selected_size: selectedSize,
+      selected_price: selectedPrice,
+      selected_discount_price: selectedDiscountPrice,
     };
     setInBasket(true);
     dispatch(addToBasket(goodToBasket));
@@ -182,28 +192,46 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
         Выберите размер
       </Typography>
 
-      <div className="d-flex flex-wrap justify-content-between mt-4">
-        {Array.isArray(good.characteristics[1].values)
-          ? good.characteristics[1].values.map((size: string) => (
-              <Button
-                key={size}
-                className={`${
-                  selectedSizes.includes(size) || selectedSize === size
-                    ? "black-button"
-                    : "gray-button"
-                }`}
-                sx={{
-                  width: "20%",
-                  marginRight: 1,
-                  marginBottom: 1,
-                  borderRadius: "6px",
-                }}
-                onClick={() => handleSizeSelection(size)}
-              >
-                {size}
-              </Button>
-            ))
-          : ""}
+      <div className="d-flex flex-wrap mt-4">
+        {good.sizes.map((size) => (
+          <Button
+            key={size.id}
+            className={`${
+              selectedSizes.includes(size.value.toString()) ||
+              selectedSize === size.value.toString()
+                ? "black-button"
+                : "gray-button"
+            }`}
+            sx={{
+              width: "20%",
+              marginRight: 1,
+              marginBottom: 1,
+              borderRadius: "6px",
+              flexDirection: "column",
+            }}
+            onClick={() =>
+              handleSizeSelection(
+                size.value.toString(),
+                size.price,
+                size.discount_price
+              )
+            }
+          >
+            <Typography
+              variant="body1"
+              sx={{ color: "#101010", fontSize: 16, fontWeight: 600 }}
+            >
+              {size.value}
+            </Typography>
+            <Typography
+              variant="body2"
+              component={"p"}
+              sx={{ color: "#8C949C", fontSize: 13, fontWeight: 500 }}
+            >
+              {size.discount_price} ₽
+            </Typography>
+          </Button>
+        ))}
       </div>
 
       <Divider className="w-100 mt-3 mb-3"></Divider>
@@ -230,67 +258,31 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
 
       <Divider className="w-100 mt-3 mb-3"></Divider>
 
-      <div className="row align-items-center">
-        <div className="col-4">
-          {good.price === good.discount_price ? (
-            <Typography
-              variant="subtitle1"
-              component={"p"}
-              sx={{ fontSize: "24px", fontWeight: 700 }}
-            >
-              {good.price} ₽
-            </Typography>
-          ) : (
-            <React.Fragment>
-              <Typography
-                variant="subtitle2"
-                component={"span"}
-                sx={{
-                  textDecoration: "line-through",
-                  fontSize: 13,
-                  fontWeight: 500,
-                }}
-              >
-                {good.price} ₽
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                component={"p"}
-                sx={{ color: "#FF1515", fontSize: "24px", fontWeight: 700 }}
-              >
-                {good.discount_price} ₽
-              </Typography>
-            </React.Fragment>
-          )}
-        </div>
-        <div className="col-8">
-          {inBasket ? (
-            <Button
-              className="black-button w-100"
-              sx={{ borderRadius: "50px", height: "50px" }}
-              onClick={goToBasket}
-            >
-              Перейти в корзину
-            </Button>
-          ) : readyToBasket ? (
-            <Button
-              className="black-button w-100"
-              sx={{ borderRadius: "50px", height: "50px" }}
-              onClick={addToBasketHandler}
-            >
-              Добавить в корзину
-            </Button>
-          ) : (
-            <Button
-              className="gray-button w-100"
-              sx={{ borderRadius: "50px", height: "50px" }}
-              onClick={selectSizeHandler}
-            >
-              Выбрать размер
-            </Button>
-          )}
-        </div>
-      </div>
+      {inBasket ? (
+        <Button
+          className="black-button w-100"
+          sx={{ borderRadius: "50px", height: "50px" }}
+          onClick={goToBasket}
+        >
+          Перейти в корзину
+        </Button>
+      ) : readyToBasket ? (
+        <Button
+          className="black-button w-100"
+          sx={{ borderRadius: "50px", height: "50px" }}
+          onClick={addToBasketHandler}
+        >
+          Добавить в корзину ({selectedDiscountPrice} ₽)
+        </Button>
+      ) : (
+        <Button
+          className="gray-button w-100"
+          sx={{ borderRadius: "50px", height: "50px" }}
+          onClick={selectSizeHandler}
+        >
+          Выбрать размер
+        </Button>
+      )}
     </div>
   );
 };

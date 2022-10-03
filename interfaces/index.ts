@@ -23,6 +23,14 @@ export interface CharacteristicsObject {
   values: string[] | string;
 }
 
+interface Size {
+  id: number;
+  value: string | number;
+  amount: number;
+  price: number;
+  discount_price: number;
+}
+
 export interface Good {
   id: number;
   category: string;
@@ -30,16 +38,17 @@ export interface Good {
   brand: string;
   description: string;
   imgs: string[];
-  price: number;
-  discount_price: number;
+  sizes: Size[];
   amount: number;
   color: string;
-  characteristics: CharacteristicsObject[];
+  colors: string[];
 }
 
 export interface GoodForBasket extends Good {
   amount_in_basket: number;
   selected_size: string;
+  selected_price: number;
+  selected_discount_price: number;
   img?: string;
 }
 

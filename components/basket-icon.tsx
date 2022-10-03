@@ -9,11 +9,6 @@ import { Basket, GoodForBasket } from "../interfaces";
 
 const BasketIcon: FunctionComponent = ({}) => {
   const router = useRouter();
-  // const goodsAmount: number = useSelector(
-  //   (state) => state.basket
-  // ).length;
-
-  // const goodsAmount = 5;
 
   const goodsAmount: number = useSelector(
     (state: Basket) => state.basket.goods

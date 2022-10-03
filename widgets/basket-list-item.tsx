@@ -30,7 +30,9 @@ export const BasketListItem: FunctionComponent<BasketItem> = ({
 }) => {
   return (
     <React.Fragment>
-      <ListItem style={{ paddingLeft: 0, paddingRight: 0 }}>
+      <ListItem
+        style={{ paddingLeft: 0, paddingRight: 0, paddingTop: "0.5em" }}
+      >
         <ListItemAvatar
           className="align-self-start"
           style={{ paddingLeft: 0, paddingRight: 0 }}
@@ -124,6 +126,8 @@ export const BasketListItem: FunctionComponent<BasketItem> = ({
           borderStyle: "none",
           height: "0.5px",
           backgroundColor: "#E8E8E8",
+          marginTop: "0.5em",
+          marginBottom: "0.5em",
         }}
       ></Divider>
     </React.Fragment>

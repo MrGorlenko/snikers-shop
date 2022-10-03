@@ -1,52 +1,17 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent } from "react";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { Good } from "../interfaces";
 
 interface CatalogItemProp extends Good {
+  minPrice: number;
   className: string;
   img: string;
   handleGoodClick(id: number): any;
 }
 
-const priceLabels = (price: number, discount_price: number) => {
-  return price === discount_price ? (
-    <React.Fragment>
-      <Typography
-        variant="subtitle1"
-        sx={{ fontWeight: 700, fontSize: "16px" }}
-      >
-        {price} ₽
-      </Typography>
-    </React.Fragment>
-  ) : (
-    <React.Fragment>
-      <Typography
-        variant="subtitle1"
-        component={"span"}
-        sx={{
-          fontWeight: 400,
-          fontSize: "16px",
-          textDecoration: "line-through",
-        }}
-      >
-        {price} ₽
-      </Typography>
-      <Typography
-        variant="subtitle1"
-        component={"span"}
-        sx={{
-          fontWeight: 700,
-          fontSize: "16px",
-          color: "#FF1515",
-          position: "relative",
-          left: "10px",
-        }}
-      >
-        {discount_price} ₽
-      </Typography>
-    </React.Fragment>
-  );
+const priceLabels = (price: number) => {
+  return <Typography>от {price} ₽</Typography>;
 };
 
 const CatalogItem: FunctionComponent<CatalogItemProp> = ({
@@ -55,9 +20,8 @@ const CatalogItem: FunctionComponent<CatalogItemProp> = ({
   className,
   img,
   brand,
-  price,
-  discount_price,
-  characteristics,
+  minPrice,
+  sizes,
   handleGoodClick,
 }) => {
   const handleClickHandler: any = (id: number) => {
@@ -77,7 +41,7 @@ const CatalogItem: FunctionComponent<CatalogItemProp> = ({
             style={{ borderRadius: 30 }}
           ></Image>
 
-          {priceLabels(price, discount_price)}
+          {priceLabels(minPrice)}
 
           <Typography
             variant="h6"
@@ -96,28 +60,19 @@ const CatalogItem: FunctionComponent<CatalogItemProp> = ({
           </Typography>
 
           <div className="d-flex flex-wrap">
-            {Array.isArray(characteristics[1].values) ? (
-              characteristics[1].values
-                .map((value: string, index: number) => {
-                  return index < 4 ? (
-                    <div
-                      key={index.toString()}
-                      className="size-element-catalog"
-                    >
-                      {value}
-                    </div>
-                  ) : (
-                    <div key="tripleDots" className="size-element-catalog">
-                      ...
-                    </div>
-                  );
-                })
-                .filter((value, index) => index < 5)
-            ) : (
-              <div className="size-element-catalog">
-                {characteristics[1].values}
-              </div>
-            )}
+            {sizes
+              .map((size, index) => {
+                return index < 4 ? (
+                  <div key={index.toString()} className="size-element-catalog">
+                    {size.value}
+                  </div>
+                ) : (
+                  <div key="tripleDots" className="size-element-catalog">
+                    ...
+                  </div>
+                );
+              })
+              .filter((value, index) => index < 5)}
           </div>
         </div>
       </div>
