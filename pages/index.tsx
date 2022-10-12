@@ -1,7 +1,7 @@
 import type { NextPage, GetStaticProps } from "next";
 import CatalogItem from "../widgets/catalog-item";
 import Typography from "@mui/material/Typography";
-
+import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Good, MainPage, GoodsInBasket, GoodForBasket } from "../interfaces";
@@ -26,6 +26,8 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
   const goToGood: any = (id: number) => {
     router.push("/goods/" + id);
   };
+
+  axios.get("http://localhost:8000/api/").then((result) => console.log(result));
 
   useEffect(() => {
     if (currentBrand !== "Все") {

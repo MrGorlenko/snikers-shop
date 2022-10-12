@@ -63,17 +63,16 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
     price: number,
     discount_price: number
   ) => {
-    if (selectedSizes.includes(size)) {
-      // && в корзине (то есть на будущее в списке selectedSizes)
-      setReadyToBasket(true);
-      setInBasket(true);
-    } else {
-      // setReadyToBasket(false);
-      setInBasket(false);
-    }
     setSelectedDiscountPrice(discount_price);
     setSelectedPrice(price);
     setSelectedSize(size);
+    setReadyToBasket(true);
+    if (selectedSizes.includes(size)) {
+      // && в корзине (то есть на будущее в списке selectedSizes)
+      setInBasket(true);
+    } else {
+      setInBasket(false);
+    }
   };
 
   // это конкретно "выбрать размер"
@@ -150,11 +149,9 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
         {good.title}
       </Typography>
 
-      {/*  */}
-
       <div className="mt-3 d-flex flex-wrap">
         {sameGoods.length > 1
-          ? sameGoods.map((goodItem) => (
+          ? sameGoods.reverse().map((goodItem) => (
               <Link key={goodItem.id} href={"/goods/" + goodItem.id}>
                 <div className="me-2 mb-2">
                   <Image
@@ -175,8 +172,6 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
             ))
           : ""}
       </div>
-
-      {/*  */}
 
       <Divider className="w-100 mt-3 mb-3"></Divider>
 
@@ -278,7 +273,7 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
         <Button
           className="gray-button w-100"
           sx={{ borderRadius: "50px", height: "50px" }}
-          onClick={selectSizeHandler}
+          disabled
         >
           Выбрать размер
         </Button>
