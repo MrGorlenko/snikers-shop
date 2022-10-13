@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 import { TopHeaderOrder } from "../../widgets/top-header-order";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -7,6 +8,12 @@ import { TextFieldComponent } from "../../components/textfield-component";
 import { ButtonComponent } from "../../components/button-component";
 
 const OrderFirst: NextPage = () => {
+  const router = useRouter();
+
+  const goToNextStep = () => {
+    router.push("/order/2");
+  };
+
   return (
     <div className="container">
       <TopHeaderOrder progressValue={33}></TopHeaderOrder>
@@ -98,6 +105,7 @@ const OrderFirst: NextPage = () => {
             ></TextFieldComponent>
           </Box>
         </div>
+
         <div className="col-4 mb-3">
           <Box
             className="search-input-wrapper ps-1"
@@ -122,7 +130,7 @@ const OrderFirst: NextPage = () => {
         </div>
       </div>
       <Divider className="w-100 mb-3"></Divider>
-      <ButtonComponent color="black" onClickHandler={() => {}}>
+      <ButtonComponent color="black" onClickHandler={goToNextStep}>
         Далее
       </ButtonComponent>
     </div>
