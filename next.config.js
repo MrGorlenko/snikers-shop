@@ -9,6 +9,7 @@ const nextConfig = {
       "assets.adidas.com",
       "media.gucci.com",
       "images.puma.com",
+      "127.0.0.1",
     ],
   },
   sassOptions: {

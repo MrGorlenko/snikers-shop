@@ -1,8 +1,6 @@
-import {
-  configureStore,
-  getDefaultMiddleware,
-} from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import basketReducer from "../features";
+import orderReducer from "../features/order";
 import storage from "reduxjs-toolkit-persist/lib/storage";
 import autoMergeLevel1 from "reduxjs-toolkit-persist/lib/stateReconciler/autoMergeLevel1";
 import {
@@ -24,6 +22,7 @@ const persistConfig = {
 
 const _persistedReducer = persistCombineReducers(persistConfig, {
   basket: basketReducer,
+  order: orderReducer,
 });
 
 export const store = configureStore({

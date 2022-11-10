@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
+import type {
+  NextPage,
+  GetStaticProps,
+  GetStaticPaths,
+  GetServerSideProps,
+} from "next";
 import { useRouter } from "next/router";
 
 import { useSelector } from "react-redux";
@@ -12,10 +17,12 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 
-import { GoodPage, Basket, GoodForBasket } from "../../interfaces";
+import { GoodPage, Basket, GoodForBasket, Good } from "../../interfaces";
 import { TopHeader } from "../../widgets/top-header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+
+import axios from "axios";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -118,7 +125,7 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
             bulletClass: "bullet",
           }}
         >
-          {good.imgs.map((img, index) => (
+          {good.images.map((img, index) => (
             <SwiperSlide key={index}>
               <Image
                 src={img}
@@ -164,7 +171,7 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
                     style={{
                       borderRadius: 30,
                     }}
-                    src={goodItem.imgs[0]}
+                    src={goodItem.images[0]}
                     alt={goodItem.color}
                   ></Image>
                 </div>
@@ -192,8 +199,8 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
           <Button
             key={size.id}
             className={`${
-              selectedSizes.includes(size.value.toString()) ||
-              selectedSize === size.value.toString()
+              selectedSizes.includes(size.size.toString()) ||
+              selectedSize === size.size.toString()
                 ? "black-button"
                 : "gray-button"
             }`}
@@ -206,7 +213,7 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
             }}
             onClick={() =>
               handleSizeSelection(
-                size.value.toString(),
+                size.size.toString(),
                 size.price,
                 size.discount_price
               )
@@ -216,7 +223,7 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
               variant="body1"
               sx={{ color: "#101010", fontSize: 16, fontWeight: 600 }}
             >
-              {size.value}
+              {size.size}
             </Typography>
             <Typography
               variant="body2"
@@ -283,9 +290,8 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data = await require("./../../data/goods.json");
-  const goods = data.goods;
-  const pathes = await goods.map((good: GoodForBasket) => {
+  const request = await axios.get("http://127.0.0.1:8000/goods/goods/");
+  const pathes = request.data.map((good: Good) => {
     return { params: { pid: String(good.id) } };
   });
 
@@ -295,16 +301,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetServerSideProps = async ({ params }) => {
   const id = params!.pid;
-  const fetchedGoods = await require("./../../data/goods.json");
-  const goods: GoodForBasket[] = fetchedGoods.goods!;
-  const good = await goods.find((good) => {
-    return good.id === Number(id);
-  });
-  return {
-    props: { good, goods },
-  };
+  const resAllGoods = await axios.get("http://127.0.0.1:8000/goods/goods/");
+  const resOneGood = await axios.get(
+    "http://127.0.0.1:8000/goods/goods/" + id + "/"
+  );
+  const good = resOneGood.data;
+
+  const goods = resAllGoods.data;
+
+  return { props: { good, goods } };
 };
 
 export default GoodPage;

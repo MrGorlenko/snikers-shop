@@ -4,7 +4,7 @@
       "id": 1,
       "category": "Обувь",
       "title": "Nike Air Max Flyknit Racer",
-      "imgs": [
+      "images": [
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c350d55e-1a36-4d52-bd39-52f753b17e2d/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/151a6a50-0f41-420d-b0d2-e87cbb638951/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/fde2ecbe-ccfd-4aa1-9a13-ae626dee4409/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
@@ -57,7 +57,7 @@
       "id": 11,
       "category": "Обувь",
       "title": "Nike Air Max Flyknit Racer",
-      "imgs": [
+      "images": [
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f1247bad-7acf-4af6-8198-8c5aab26eeb2/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7e0f3741-2574-4e5c-a70c-ae49e072d330/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2608332b-6953-4c8a-a575-a67e406b9d0d/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
@@ -124,7 +124,7 @@
       "id": 12,
       "category": "Обувь",
       "title": "Nike Air Max Flyknit Racer",
-      "imgs": [
+      "images": [
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c2deb3da-1553-4988-8ae2-c086c12017c8/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/86c47097-d815-46e3-ba2d-7e513286c453/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b7675dbb-cd01-484b-98e7-14a5ce01edf9/air-max-flyknit-racer-mens-shoes-PsrWR7.png",
@@ -156,7 +156,7 @@
       "id": 4,
       "category": "Обувь",
       "title": "SAMBA OG SHOES",
-      "imgs": [
+      "images": [
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ded7958c612642cf95e1ae99011791be_9366/Samba_OG_Shoes_Grey_HP7905_01_standard.jpg",
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/715125458c5c4edd84c4ae990117aa99_9366/Samba_OG_Shoes_Grey_HP7905_02_standard_hover.jpg",
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ad5569ce44384300a5bdae990117c318_9366/Samba_OG_Shoes_Grey_HP7905_04_standard.jpg"
@@ -208,7 +208,7 @@
       "id": 5,
       "category": "Обувь",
       "title": "LITE RACER ADAPT 5.0 SHOES",
-      "imgs": [
+      "images": [
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cfdca7c486e8482aa178aed10135f8e7_9366/Lite_Racer_Adapt_5.0_Shoes_Black_HR1800_01_standard.jpg",
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/84b8b794e94b4e06a4ecaed1013610d7_9366/Lite_Racer_Adapt_5.0_Shoes_Black_HR1800_02_standard_hover.jpg",
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4979c19ca38e48e8992caed1013631fe_9366/Lite_Racer_Adapt_5.0_Shoes_Black_HR1800_05_standard.jpg"
@@ -260,7 +260,7 @@
       "id": 51,
       "category": "Обувь",
       "title": "LITE RACER ADAPT 5.0 SHOES",
-      "imgs": [
+      "images": [
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a063be12b9ea4dc9aa31aed1012e13bd_9366/Lite_Racer_Adapt_5.0_Shoes_White_HR1798_01_standard.jpg",
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9cb0e875e6484c949353aed1012e4130_9366/Lite_Racer_Adapt_5.0_Shoes_White_HR1798_04_standard.jpg",
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e04e05386bca4335b1f0aed1012e4bd0_9366/Lite_Racer_Adapt_5.0_Shoes_White_HR1798_05_standard.jpg"
@@ -312,7 +312,7 @@
       "id": 2,
       "category": "Обувь",
       "title": "KD 15",
-      "imgs": [
+      "images": [
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b9ced701-5231-400f-a924-94240d83765e/kd15-basketball-shoes-10P3rj.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/88c2e771-5602-4b10-a799-34cf02dc8625/kd15-basketball-shoes-10P3rj.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/72da4c61-f0ed-41b4-88d0-7fb9aea046aa/kd15-basketball-shoes-10P3rj.png",
@@ -365,7 +365,7 @@
       "id": 22,
       "category": "Обувь",
       "title": "KD 15",
-      "imgs": [
+      "images": [
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7a1ef3f7-7519-4aaa-921d-0b41f1ad881c/kd15-basketball-shoes-10P3rj.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/308b15d9-35b5-481c-91c8-7ea5a37d74c9/kd15-basketball-shoes-10P3rj.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a59c7174-9d83-46bc-a452-f704084dfc2f/kd15-basketball-shoes-10P3rj.png"
@@ -417,7 +417,7 @@
       "id": 3,
       "category": "Обувь",
       "title": "Nike Air Force 1 '07",
-      "imgs": [
+      "images": [
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b7d9211c-26e7-431a-ac24-b0540fb3c00f/air-force-1-07-mens-shoes-5QFp5Z.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3cc96f43-47b6-43cb-951d-d8f73bb2f912/air-force-1-07-mens-shoes-5QFp5Z.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a0a300da-2e16-4483-ba64-9815cf0598ac/air-force-1-07-mens-shoes-5QFp5Z.png"
@@ -469,7 +469,7 @@
       "id": 31,
       "category": "Обувь",
       "title": "Nike Air Force 1 '07",
-      "imgs": [
+      "images": [
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/fc4622c4-2769-4665-aa6e-42c974a7705e/air-force-1-07-mens-shoes-5QFp5Z.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7cd0845e-4eba-4ccf-8237-bc47f1e31f3e/air-force-1-07-mens-shoes-5QFp5Z.png",
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/900c2ac8-8a3e-45f7-aac7-c92ccce8505a/air-force-1-07-mens-shoes-5QFp5Z.png"
@@ -522,7 +522,7 @@
       "id": 8,
       "category": "Обувь",
       "title": "Speedcat LS Men's Driving Shoes",
-      "imgs": [
+      "images": [
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1350,h_1350/global/380173/12/sv01/fnd/PNA/fmt/png/Speedcat-LS-Men's-Driving-Shoes",
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380173/12/fnd/PNA/fmt/png/Speedcat-LS-Men's-Driving-Shoes",
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380173/12/sv03/fnd/PNA/fmt/png/Speedcat-LS-Men's-Driving-Shoes"
@@ -574,7 +574,7 @@
       "id": 81,
       "category": "Обувь",
       "title": "Speedcat LS Men's Driving Shoes",
-      "imgs": [
+      "images": [
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1350,h_1350/global/380173/01/sv01/fnd/PNA/fmt/png/Speedcat-LS-Men's-Driving-Shoes",
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380173/01/sv03/fnd/PNA/fmt/png/Speedcat-LS-Men's-Driving-Shoes",
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380173/01/sv04/fnd/PNA/fmt/png/Speedcat-LS-Men's-Driving-Shoes"

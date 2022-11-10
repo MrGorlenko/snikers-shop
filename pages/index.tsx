@@ -1,10 +1,16 @@
-import type { NextPage, GetStaticProps } from "next";
+import type { NextPage, GetStaticProps, GetServerSideProps } from "next";
 import CatalogItem from "../widgets/catalog-item";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Good, MainPage, GoodsInBasket, GoodForBasket } from "../interfaces";
+import {
+  Good,
+  MainPage,
+  GoodsInBasket,
+  GoodForBasket,
+  BrandRes,
+} from "../interfaces";
 import { TopHeader } from "../widgets/top-header";
 import { SearchBar } from "../components/search-bar";
 import { BrandButtons } from "../widgets/brand-buttons";
@@ -26,8 +32,6 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
   const goToGood: any = (id: number) => {
     router.push("/goods/" + id);
   };
-
-  axios.get("http://localhost:8000/api/").then((result) => console.log(result));
 
   useEffect(() => {
     if (currentBrand !== "Все") {
@@ -75,17 +79,14 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
             title={good.title}
             className="col-6"
             brand={good.brand}
-            img={good.imgs[0]}
-            imgs={good.imgs}
-            category={good.category}
+            img={good.images[0]}
+            images={good.images}
             minPrice={good.sizes
               .map((size) => size.discount_price)
               .reduce((a, b) => Math.min(a, b))}
             sizes={good.sizes}
             color={good.color}
-            colors={good.colors}
             description={good.description}
-            amount={good.amount}
             handleGoodClick={goToGood}
           />
         ))}
@@ -94,10 +95,13 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  const data: any = require("./../data/goods.json");
-  const goods: GoodsInBasket = data.goods;
-  const brands: string[] = data.brands;
+export const getServerSideProps: GetServerSideProps = async () => {
+  const res = await axios.get("http://127.0.0.1:8000/goods/goods/");
+  const brandsRes = await axios.get("http://127.0.0.1:8000/goods/brands/");
+
+  const goods = res.data;
+  const brands = brandsRes.data.map((brand: BrandRes) => brand.title);
+
   return { props: { goods, brands } };
 };
 

@@ -2,14 +2,16 @@ import Button from "@mui/material/Button/Button";
 import React, { FunctionComponent } from "react";
 
 interface Button {
-  children: string;
+  children: string | JSX.Element;
   color: string;
+  disabled?: boolean;
   onClickHandler(): any;
 }
 
 export const ButtonComponent: FunctionComponent<Button> = ({
   children,
   color,
+  disabled = false,
   onClickHandler,
 }) => {
   const sx = {
@@ -26,7 +28,7 @@ export const ButtonComponent: FunctionComponent<Button> = ({
     color: "#101010",
   };
 
-  let className: string = "";
+  let classesDisabled = "";
 
   if (color === "red") {
     sx.backgroundColor = "#FF1515";
@@ -36,10 +38,16 @@ export const ButtonComponent: FunctionComponent<Button> = ({
   if (color === "black") {
     sx.backgroundColor = "#101010";
     sx.color = "#fff";
+    classesDisabled = "black-disabled";
   }
 
   return (
-    <Button sx={sx} onClick={onClickHandler} className={` ${className} `}>
+    <Button
+      classes={{ disabled: classesDisabled }}
+      sx={sx}
+      onClick={onClickHandler}
+      disabled={disabled}
+    >
       {children}
     </Button>
   );

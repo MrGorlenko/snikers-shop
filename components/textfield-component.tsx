@@ -3,24 +3,24 @@ import TextField from "@mui/material/TextField";
 
 interface TextFieldComponent {
   label: string;
+  value: string;
   onChange(text: string): any;
 }
 
 export const TextFieldComponent: FunctionComponent<TextFieldComponent> = ({
   label,
+  value,
   onChange,
 }) => {
-  const [value, setValue] = useState("");
-
-  const textHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-    onChange(e.target.value);
+  const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    onChange(event.target.value);
   };
 
   return (
     <TextField
       id="input-with-sx"
-      label={label}
+      placeholder={label}
+      label={""}
       multiline
       variant="outlined"
       fullWidth={true}
@@ -32,7 +32,7 @@ export const TextFieldComponent: FunctionComponent<TextFieldComponent> = ({
         },
       }}
       value={value}
-      onChange={textHandler}
+      onChange={onChangeHandler}
     />
   );
 };

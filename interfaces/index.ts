@@ -23,9 +23,9 @@ export interface CharacteristicsObject {
   values: string[] | string;
 }
 
-interface Size {
+export interface Size {
   id: number;
-  value: string | number;
+  size: string;
   amount: number;
   price: number;
   discount_price: number;
@@ -33,15 +33,12 @@ interface Size {
 
 export interface Good {
   id: number;
-  category: string;
   title: string;
   brand: string;
   description: string;
-  imgs: string[];
+  images: string[];
   sizes: Size[];
-  amount: number;
   color: string;
-  colors: string[];
 }
 
 export interface GoodForBasket extends Good {
@@ -83,4 +80,36 @@ export interface CounterNumbersWidget {
 
 export interface HeaderOptions {
   isBack: boolean;
+}
+
+export interface BrandRes {
+  id: number;
+  title: string;
+}
+
+export interface Order {
+  city: string;
+  street: string;
+  houseNumber: string;
+  apartmentNumber?: string;
+  entryNumber?: string;
+  intercome?: string;
+  floorNumber?: string;
+  postIndex: string;
+  comment?: string;
+  name: string;
+  phone: string;
+}
+
+export interface OrderInfo {
+  order: Order;
+}
+
+interface BasketInfo {
+  goods: GoodForBasket[];
+}
+
+export interface OdrerState {
+  order: OrderInfo;
+  basket: BasketInfo;
 }

@@ -64,7 +64,7 @@ const CatalogItem: FunctionComponent<CatalogItemProp> = ({
               .map((size, index) => {
                 return index < 4 ? (
                   <div key={index.toString()} className="size-element-catalog">
-                    {size.value}
+                    {size.size}
                   </div>
                 ) : (
                   <div key="tripleDots" className="size-element-catalog">

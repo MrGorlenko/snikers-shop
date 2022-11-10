@@ -1,29 +1,53 @@
 import type { NextPage } from "next";
 import { TopHeaderOrder } from "../../widgets/top-header-order";
-import { ChangeEvent } from "react";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import { TextFieldComponent } from "../../components/textfield-component";
 import { ButtonComponent } from "../../components/button-component";
-import TextField from "@mui/material/TextField";
+import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-import InputMask from "react-input-mask";
+import { PhoneNumberMaskInput } from "../../widgets/phone-number-mask-input";
+import { setCustomerPhone, setCustomerName } from "../../features/order";
+import { OdrerState } from "../../interfaces";
 
 const OrderSecond: NextPage = () => {
-  const [phoneNumber, setPhoneNumber] = useState("+7 | ");
-  const [phoneFocused, setPhoneFocused] = useState(false);
+  const customerPhoneState = useSelector(
+    (state: OdrerState) => state.order.order.phone
+  );
+  const customerName = useSelector(
+    (state: OdrerState) => state.order.order.name
+  );
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const [name, setName] = useState(customerName);
+  const [phoneNumber, setPhoneNumber] = useState(customerPhoneState);
+  const [phoneNumberUnformated, setPhoneNumberUnformated] = useState("");
 
-  const setPhoneValue = (event: ChangeEvent<HTMLInputElement>) => {
-    const inputValue = event.target.value;
-    setPhoneNumber(inputValue);
+  const setPhoneNumberHandler = (phone: string) => {
+    setPhoneNumber(phone);
   };
 
-  const focusPhone = () => {
-    setPhoneFocused(true);
+  const setPhoneNumberUnformatedHandler = (phone: string) => {
+    setPhoneNumberUnformated(phone);
   };
-  const blurPhone = () => {
-    setPhoneFocused(false);
+
+  const setNameHandler = (name: string) => {
+    setName(name);
+  };
+
+  useEffect(() => {
+    if (phoneNumber.length === 18) {
+      dispatch(setCustomerPhone(phoneNumber));
+    }
+    if (name !== "") dispatch(setCustomerName(name));
+    if (name === "") dispatch(setCustomerName(""));
+  });
+
+  const goNextStep = () => {
+    router.push("/order/3");
   };
 
   return (
@@ -47,7 +71,8 @@ const OrderSecond: NextPage = () => {
           >
             <TextFieldComponent
               label="Имя"
-              onChange={() => {}}
+              value={name}
+              onChange={setNameHandler}
             ></TextFieldComponent>
           </Box>
         </div>
@@ -56,20 +81,11 @@ const OrderSecond: NextPage = () => {
             className="search-input-wrapper ps-1"
             sx={{ borderRadius: "16px" }}
           >
-            <TextField
-              id="input-with-sx"
-              multiline
+            <PhoneNumberMaskInput
               value={phoneNumber}
-              variant="outlined"
-              fullWidth={true}
-              size={"small"}
-              InputProps={{
-                style: { color: phoneFocused ? "#000" : "#8C949C" },
-              }}
-              onChange={setPhoneValue}
-              onFocus={focusPhone}
-              onBlur={blurPhone}
-            />
+              setFormattedValue={setPhoneNumberHandler}
+              setUnformattedValue={setPhoneNumberUnformatedHandler}
+            ></PhoneNumberMaskInput>
           </Box>
         </div>
       </div>
@@ -78,7 +94,7 @@ const OrderSecond: NextPage = () => {
       <div className="pt-5 pb-5"></div>
 
       <Divider className="w-100 mb-3 "></Divider>
-      <ButtonComponent color="black" onClickHandler={() => {}}>
+      <ButtonComponent color="black" onClickHandler={goNextStep}>
         Далее
       </ButtonComponent>
     </div>

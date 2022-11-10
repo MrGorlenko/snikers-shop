@@ -21,10 +21,10 @@ interface BasketItem {
 
 export const RemoveGoodModal: FunctionComponent<BasketItem> = ({
   zIndex,
-  img,
-  title,
-  size,
-  price,
+  img = "",
+  title = "",
+  size = "",
+  price = 0,
   wrapperClassName,
   switchOffHandler,
   reject,

@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 
 import { Button } from "@mui/material";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import { Basket, GoodForBasket } from "../interfaces";
+import { Basket, GoodForBasket, Size } from "../interfaces";
 import { GoodCounter } from "../widgets/good-conter";
 import { TopHeader } from "../widgets/top-header";
 import { BasketListItem } from "../widgets/basket-list-item";
@@ -37,6 +37,8 @@ const Basket: NextPage = () => {
   };
 
   const deleteFromBasketHandler: any = (index: number) => {
+    setRemovedIndex(0);
+    setShowModal(false);
     dispatch(removeFromBasket(index));
   };
 
@@ -75,7 +77,11 @@ const Basket: NextPage = () => {
     .reduce((prev, next) => prev + next, 0);
 
   const increment = (index: number) => {
-    if (goods[index].amount_in_basket >= goods[index].amount) return;
+    const size: Size = goods[index].sizes.find(
+      (size) => size.size === goods[index].selected_size
+    ) || { id: 0, size: "", amount: 0, price: 0, discount_price: 0 };
+    const sizeAmount = size.amount;
+    if (goods[index].amount_in_basket >= sizeAmount) return;
     dispatch(incrementGood(index));
   };
   const decrement = (index: number) => {
@@ -91,7 +97,7 @@ const Basket: NextPage = () => {
     (good: GoodForBasket, index: number) => (
       <BasketListItem
         key={good.id + (index * 2 + Math.random())}
-        img={good.imgs[0]}
+        img={good.images[0]}
         title={good.title}
         size={good.selected_size}
         price={good.selected_price}
@@ -124,7 +130,7 @@ const Basket: NextPage = () => {
 
   const areYouSure: JSX.Element = (
     <RemoveGoodModal
-      img={goods[removedIndex].imgs[0]}
+      img={goods[removedIndex].images[0]}
       title={goods[removedIndex].title}
       size={goods[removedIndex].selected_size}
       price={goods[removedIndex].selected_price}
