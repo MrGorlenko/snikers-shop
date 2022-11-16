@@ -290,7 +290,7 @@ const GoodPage: NextPage<GoodPage> = ({ good, goods }: GoodPage) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const request = await axios.get("http://127.0.0.1:8000/goods/goods/");
+  const request = await axios.get("https://api.thepara.shop/goods/goods/");
   const pathes = request.data.map((good: Good) => {
     return { params: { pid: String(good.id) } };
   });
@@ -303,9 +303,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetServerSideProps = async ({ params }) => {
   const id = params!.pid;
-  const resAllGoods = await axios.get("http://127.0.0.1:8000/goods/goods/");
+  const resAllGoods = await axios.get("https://api.thepara.shop/goods/goods/");
   const resOneGood = await axios.get(
-    "http://127.0.0.1:8000/goods/goods/" + id + "/"
+    "https://api.thepara.shop/goods/goods/" + id + "/"
   );
   const good = resOneGood.data;
 

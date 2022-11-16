@@ -96,8 +96,8 @@ const Home: NextPage<MainPage> = ({ goods, brands }: MainPage) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await axios.get("http://127.0.0.1:8000/goods/goods/");
-  const brandsRes = await axios.get("http://127.0.0.1:8000/goods/brands/");
+  const res = await axios.get("https://api.thepara.shop/goods/goods/");
+  const brandsRes = await axios.get("https://api.thepara.shop/goods/brands/");
 
   const goods = res.data;
   const brands = brandsRes.data.map((brand: BrandRes) => brand.title);

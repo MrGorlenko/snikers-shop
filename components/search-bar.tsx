@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState } from "react";
 import Box from "@mui/material/Box";
 import SearchIcon from "@mui/icons-material/Search";
 import { TextFieldComponent } from "./textfield-component";
@@ -8,7 +8,10 @@ interface SearchBar {
 }
 
 export const SearchBar: FunctionComponent<SearchBar> = ({ searchHandler }) => {
+  const [searchValue, setSearchValue] = useState("");
+
   const textHandler = (text: string) => {
+    setSearchValue(text);
     searchHandler(text);
   };
 
@@ -32,6 +35,7 @@ export const SearchBar: FunctionComponent<SearchBar> = ({ searchHandler }) => {
       />
       <TextFieldComponent
         label="Поиск по каталогу"
+        value={searchValue}
         onChange={textHandler}
       ></TextFieldComponent>
     </Box>

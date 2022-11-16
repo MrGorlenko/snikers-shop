@@ -43,7 +43,7 @@ const OrderFinal: NextPage = () => {
     };
 
     axios
-      .post("http://localhost:8000/orders/delivery_info/", orderInfoObject)
+      .post("https://api.thepara.shop/orders/delivery_info/", orderInfoObject)
       .then((res) => console.log(res));
   };
   return (
