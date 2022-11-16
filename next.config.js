@@ -4,13 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      "static.nike.com",
-      "assets.adidas.com",
-      "media.gucci.com",
-      "images.puma.com",
-      "127.0.0.1",
-    ],
+    domains: ["127.0.0.1", "api.thepara.shop"],
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "assets")],

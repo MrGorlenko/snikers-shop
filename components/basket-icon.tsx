@@ -15,6 +15,7 @@ const BasketIcon: FunctionComponent = ({}) => {
   ).length;
 
   const goToBasket = () => {
+    if (goodsAmount < 1) return;
     router.push("/basket");
   };
 
